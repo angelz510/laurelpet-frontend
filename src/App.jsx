@@ -6,7 +6,13 @@ import Profile from "pages/Profile/Profile";
 function App() {
   return (
     <div className="app">
-      <h1>New App</h1>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/profile/:userId" element={<Profile />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
