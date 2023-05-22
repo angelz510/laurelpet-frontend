@@ -110,8 +110,13 @@ const Nav = () => {
           </FormControl>
         </FlexBetween>
       ) : (
-        <IconButton></IconButton>
+        <IconButton
+          onClick={() => setIsMobileMenuToggled(!isMobileMenuToggled)}
+        >
+          <Menu />
+        </IconButton>
       )}
+      {/* MOBILE NAV */}
     </FlexBetween>
   );
 };
