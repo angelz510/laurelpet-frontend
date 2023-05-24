@@ -1,5 +1,12 @@
+import { Box } from "@mui/material";
+import Nav from "../../components/Nav/Nav";
+
 const Home = () => {
-  return <div>This is the Home Page</div>;
+  return (
+    <Box>
+      <Nav />
+    </Box>
+  );
 };
 
 export default Home;
