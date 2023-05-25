@@ -1,12 +1,13 @@
 import { BrowserRouter, Navigate, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
-import Login from "./pages/Login/Login";
+import LoginPage from "./pages/LoginPage/LoginPage";
 import Profile from "./pages/Profile/Profile";
 import { useMemo } from "react";
 import { useSelector } from "react-redux";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
 import { themeSettings } from "./theme";
+import LoginPage from "./pages/LoginPage/LoginPage";
 
 function App() {
   const mode = useSelector((state) => state.mode);
@@ -18,7 +19,7 @@ function App() {
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <Routes>
-            <Route path="/" element={<Login />} />
+            <Route path="/" element={<LoginPage />} />
             <Route path="/home" element={<Home />} />
             <Route path="/profile/:userId" element={<Profile />} />
           </Routes>
